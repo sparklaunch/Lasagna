@@ -1,6 +1,7 @@
 import Book from "./components/Book";
 import { BookContextProvider } from "./contexts/BookContext";
 import LeftArrow from "./components/LeftArrow";
+import RIghtArrow from "./components/RIghtArrow";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <div className={"justify-center items-center flex h-full"}>
           <Book />
         </div>
+        <RIghtArrow />
       </div>
     </BookContextProvider>
   );
