@@ -6,6 +6,7 @@ const App = () => {
       <div className={"justify-center items-center flex h-full"}>
         <Book />
       </div>
+      <div></div>
     </div>
   );
 };
