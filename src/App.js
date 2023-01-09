@@ -1,7 +1,9 @@
+import Book from "./components/Book";
+
 const App = () => {
   return (
     <div>
-      <p className="underline text-2xl">Wow</p>
+      <Book />
     </div>
   );
 };
