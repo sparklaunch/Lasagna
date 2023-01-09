@@ -9,7 +9,9 @@ const LeftArrow = () => {
   };
   return (
     <div
-      className={"fixed top-[50%] translate-y-[-50%] left-[5vw] cursor-pointer"}
+      className={
+        "fixed top-[50%] translate-y-[-50%] left-[5vw] cursor-pointer hover:scale-125 transition-all"
+      }
       onClick={flipLeft}
     >
       <AiOutlineLeft color={"white"} size={"3em"} />

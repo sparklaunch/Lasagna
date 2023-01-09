@@ -10,7 +10,7 @@ const RightArrow = () => {
   return (
     <div
       className={
-        "fixed top-[50%] translate-y-[-50%] right-[5vw] cursor-pointer"
+        "fixed top-[50%] translate-y-[-50%] right-[5vw] cursor-pointer hover:scale-125 transition-all"
       }
       onClick={flipRight}
     >
