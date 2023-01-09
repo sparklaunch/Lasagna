@@ -1,9 +1,10 @@
 import HTMLFlipBook from "react-pageflip";
 import Page from "./Page";
-import { useRef } from "react";
+import { useContext } from "react";
+import BookContext from "../contexts/BookContext";
 
 const Book = () => {
-  const book = useRef();
+  const { book } = useContext(BookContext);
   const pages = [...Array(20).keys()];
   return (
     <HTMLFlipBook width={486} height={625} useMouseEvents={false} ref={book}>
