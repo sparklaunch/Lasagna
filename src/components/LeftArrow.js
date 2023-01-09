@@ -1,15 +1,11 @@
 import { AiOutlineLeft } from "react-icons/ai";
 import { useContext } from "react";
 import BookContext from "../contexts/BookContext";
-import SoundContext from "../contexts/SoundContext";
-import Sound from "react-sound";
 
 const LeftArrow = () => {
   const { book } = useContext(BookContext);
-  const { setPlaying } = useContext(SoundContext);
   const flipLeft = () => {
     book.current.pageFlip().flipPrev();
-    setPlaying(Sound.status.STOPPED);
   };
   return (
     <div
