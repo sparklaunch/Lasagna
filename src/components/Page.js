@@ -19,7 +19,11 @@ const Page = forwardRef((props, ref) => {
       ref={ref}
       onClick={playSound}
     >
-      <img src={`/assets/${name}.avif`} alt="page" />
+      <img
+        src={`/assets/${name}.avif`}
+        alt="page"
+        className={"cursor-pointer"}
+      />
       <Sound
         url={`/assets/${name}.m4a`}
         playStatus={playing}
