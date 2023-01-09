@@ -1,11 +1,13 @@
 import HTMLFlipBook from "react-pageflip";
+import Page from "./Page";
 
 const Book = () => {
+  const pages = [...Array(20).keys()];
   return (
-    <HTMLFlipBook width={300} height={500} size={"stretch"}>
-      <div>Halo</div>
-      <div>Hola</div>
-      <div>Helo</div>
+    <HTMLFlipBook width={486} height={625}>
+      {pages.map((page) => {
+        return <Page name={page} />;
+      })}
     </HTMLFlipBook>
   );
 };
