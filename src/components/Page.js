@@ -3,10 +3,14 @@ import AudioContext from "../contexts/AudioContext";
 
 const Page = forwardRef((props, ref) => {
   const { name } = props;
-  const { setAudio, setPlaying } = useContext(AudioContext);
+  const { setAudio, setPlaying, playing } = useContext(AudioContext);
   const onClick = () => {
-    setAudio(`/assets/${name}.m4a`);
-    setPlaying(true);
+    if (playing) {
+      setPlaying(false);
+    } else {
+      setAudio(`/assets/${name}.m4a`);
+      setPlaying(true);
+    }
   };
   return (
     <div className={"object-fill overflow-y-clip"} ref={ref} onClick={onClick}>
